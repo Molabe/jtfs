@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gradient {
+    background: linear-gradient(to right, white, transparent),
+    url(../svgs/noise.svg);
+    filter: contrast(100%) brightness(75%);
+    mix-blend-mode: multiply;
+}
