@@ -7,6 +7,10 @@
     transform: translate(-50%, -50%);
 }
 
+.bg-devgru-blue {
+    background: #0A1F44;
+}
+
 .gradient {
     background: linear-gradient(to right, white, transparent),
     url(../svgs/noise.svg);
