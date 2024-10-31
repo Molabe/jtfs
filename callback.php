@@ -1,24 +1,23 @@
 <?php
 session_start();
+require 'vendor/autoload.php'; // Load Composer autoloader for .env handling
 
-// Nahradiť tieto hodnoty svojimi
-$client_id = '1301503755979853957';
-$client_secret = 'qa__Ab2sWrvMRIBb4rFhMh6ZZ-5yG7Oo';
-$redirect_uri = 'http://localhost:8080/callback.php'; // alebo tvoje URL
-$guild_id = '1280088464997482498';
+// Load environment variables
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-// Získaj autorizačný kód
+// Get authorization code
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
 
-    // Vytvoríme POST požiadavku na získanie prístupového tokenu
+    // Create POST request to obtain access token
     $url = 'https://discord.com/api/oauth2/token';
     $data = [
-        'client_id' => $client_id,
-        'client_secret' => $client_secret,
+        'client_id' => $_ENV['CLIENT_ID'], // Make sure the env variable is named correctly
+        'client_secret' => $_ENV['CLIENT_SECRET'],
         'grant_type' => 'authorization_code',
         'code' => $code,
-        'redirect_uri' => $redirect_uri,
+        'redirect_uri' => $_ENV['REDIRECT_URI'], // Corrected variable name
         'scope' => 'identify',
     ];
 
@@ -39,10 +38,10 @@ if (isset($_GET['code'])) {
 
     $response_data = json_decode($response, true);
 
-    // Získanie prístupového tokenu
+    // Retrieve access token
     $access_token = $response_data['access_token'];
 
-    // Načítať informácie o používateľovi
+    // Load user information
     $user_url = 'https://discord.com/api/v10/users/@me';
     $user_options = [
         'http' => [
@@ -57,13 +56,13 @@ if (isset($_GET['code'])) {
         die('Error fetching user information');
     }
 
-    // Uložiť informácie do session
+    // Save user info to session
     $user_data = json_decode($user_response, true);
     $_SESSION['user'] = $user_data;
     $_SESSION['access_token'] = $access_token;
 
-    // Presmerovanie na index.php alebo profil.php
-    header('Location: index.php'); // alebo 'Location: profile.php';
+    // Redirect to index.php or profile.php
+    header('Location: profile.php'); // Redirect to profile page
     exit();
 } else {
     die('Authorization code not received');

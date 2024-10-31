@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php
+session_start();
+require 'vendor/autoload.php'; // Načítanie Composer autoloaderu na prácu s .env
+
+// Načítanie env premenných
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,12 +24,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Joint Task Force Spectre</title>
 
-    <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </head>
 <body style="margin: 0; padding: 0;">
 
@@ -38,7 +42,7 @@
                 <?php if (isset($_SESSION['user'])): ?>
                     <a href="profile.php" class="nav-link text-light">PROFIL</a>
                 <?php else: ?>
-                    <a href="https://discord.com/oauth2/authorize?client_id=1301503755979853957&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback.php&scope=identify" class="nav-link text-light">PRIHLÁSIŤ SA</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=<?php echo $_ENV['CLIENT_ID']; ?>&response_type=code&redirect_uri=<?php echo urlencode('http://localhost:8080/callback.php'); ?>&scope=identify" class="nav-link text-light">PRIHLÁSIŤ SA</a>
                 <?php endif; ?>
             </li>
         </ul>
@@ -61,7 +65,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 mt-4">
                 <p>Naša Arma 3 skupina vznikla 1. novembra 2024 pod vedením zakladateľov Molabe a Foxa. Sme komunita nadšencov vojenských simulácií a reálneho taktického hrania. Naša skupina je zameraná na detailné simulovanie špeciálnych operácií elitnej jednotky DEVGRU (United States Naval Special Warfare Development Group) v kombinácii s leteckou podporou USAF (United States Air Force).</p>
-                </br>
+                <br>
                 <p>Cieľom našej komunity je vytvoriť realistický zážitok, ktorý hráčom umožní zažiť atmosféru špeciálnych operácií a spolupracovať v tíme na úspešnom splnení misií. Okrem taktického hrania kladieme dôraz aj na komunitu, vzájomnú pomoc a rozvoj hráčskych schopností.</p>
             </div>
         </div>
