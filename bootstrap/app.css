@@ -11,9 +11,32 @@
     background: #0A1F44;
 }
 
+.bg-devgru-gray {
+    background: #2E2E3A;
+}
+
+.bg-devgru-black {
+    background: #1B1B1F;
+}
+
+.bg-devgru-gold {
+    background: #8A6A27;
+}
+
+.bg-devgru-red {
+    background: #5C1A1B;
+}
+
 .gradient {
     background: linear-gradient(to right, white, transparent),
     url(../svgs/noise.svg);
     filter: contrast(100%) brightness(75%);
     mix-blend-mode: multiply;
+}
+
+.rounded-img {
+    border-radius: 50% !important;
+    border: solid !important;
+    border-color: #0A1F44 !important;
+    border-width: 5px !important;
 }

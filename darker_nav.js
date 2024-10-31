@@ -4,7 +4,7 @@ myMove = () => {
         const scrollPosition = document.documentElement.scrollTop;
 
         if (window.scrollY > 50) {
-            elem.style.background = "#0A1F44";
+            elem.style.background = "#1B1B1F";
             elem.style.transition = "background 0.75s ease-in-out";
         } else {
             elem.style.background = "transparent";
