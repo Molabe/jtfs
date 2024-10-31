@@ -36,7 +36,13 @@
 
 .rounded-img {
     border-radius: 50% !important;
+}
+
+.devgru-profile-border {
+    border-radius: 20px !important;
     border: solid !important;
-    border-color: #0A1F44 !important;
     border-width: 5px !important;
+    border-color: #0A1F44;
+    background: #0A1F44;
+    padding: 5px;
 }

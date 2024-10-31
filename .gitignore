@@ -1,0 +1,33 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore environment files
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore cache files
+/cache/
+*.cache
+
+# Ignore backup files
+*~
+*.bak
+*.tmp
+
+# Ignore compiled PHP files
+*.php~
+
+# Ignore any other sensitive files
+secret/
