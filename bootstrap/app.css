@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+.text-center-dashboard {
+    text-align: center;
+}
+
 .text-center {
     position: absolute;
     top: 50%;
@@ -27,6 +31,46 @@
     background: #5C1A1B;
 }
 
+.text-devgru-blue {
+    color: #0A1F44;
+}
+
+.text-devgru-gray {
+    color: #2E2E3A;
+}
+
+.text-devgru-black {
+    color: #1B1B1F;
+}
+
+.text-devgru-gold {
+    color: #8A6A27;
+}
+
+.text-devgru-red {
+    color: #5C1A1B;
+}
+
+.devgru-card-nswdg {
+    background: #0A1F44;
+    padding: 16px;
+    border-radius: 15px;
+}
+
+.devgru-card-usaf {
+    background: #0A1F44;
+    border-radius: 15px;
+    padding: 13px;
+}
+
+.n-open {
+    color: #0ecd00;
+}
+
+a {
+    text-decoration: none;
+}
+
 .gradient {
     background: linear-gradient(to right, white, transparent),
     url(../svgs/noise.svg);
@@ -39,10 +83,37 @@
 }
 
 .devgru-profile-border {
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     border: solid !important;
     border-width: 5px !important;
-    border-color: #0A1F44;
-    background: #0A1F44;
-    padding: 5px;
+    border-color: rgba(135, 135, 135, 0.15) !important;
+    background: rgb(99, 91, 91) !important;
+    padding: 10px !important;
+}
+
+.center-cropped {
+    position: relative;
+    width: 100%; /* adjust to desired size */
+    height: 50vh; /* adjust to desired size */
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(75%);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.devgru-text {
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 4px 4px 2px #0A1F44;
+}
+
+.br-line {
+    border-bottom: dotted;
+    border-width: 5px;
+    border-color: white;
 }

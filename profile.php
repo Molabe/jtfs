@@ -77,45 +77,44 @@ if ($response && ($member_data = json_decode($response, true)) && isset($member_
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./bootstrap/app.css">
     <link rel="shortcut icon" type="image/jpeg" href="./images/jtfs_logo.jpg">
-    <title>Profil používateľa</title>
+    <title>JTFS Panel</title>
+    <link rel="shortcut icon" type="image/jpeg" href="./images/jtfs_logo.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
-    <a class="navbar-brand d-flex justify-content-end" href="#">
-        <img style="width: 17.5%" src="./images/jtfs_logo_rbg.png" alt="Logo">
-    </a>
-    <div class="container-fluid justify-content-center">
-        <ul class="navbar-nav">
+<body class="bg-devgru-black">
+
+<div class="container-fluid d-flex mt-5">
+
+        <ul class="nav flex-column align-items-center justify-content-center" style="border-right: 5px solid #2E2E3A; min-width: 35vh; width:35vh; max-width:40vh;">
             <li class="nav-item"><a href="index.php" class="nav-link text-light">DOMOV</a></li>
-            <li class="nav-item"><a href="#" class="nav-link text-light">O NÁS</a></li>
+            <li class="nav-item"><a href="nabor.php" class="nav-link text-light">NÁBOR</a></li>
             <li class="nav-item"><a href="#" class="nav-link text-light">HOVORIŤ S RECRUITEROM</a></li>
             <li class="nav-item">
                 <a href="logout.php" class="nav-link text-light">ODHLÁSIŤ SA</a>
             </li>
         </ul>
-    </div>
-</nav>
 
-<div>
-    <div class="text-over-image">
-        <img src="./images/107410_20241023235653_1.png" style="width: 100%; height: auto; filter: brightness(50%);">
-        <div class="text-center text-light">
-            <div class="container-fluid d-flex align-items-center">
-                <div class="row">
-                    <h1>Vitaj, <?php echo htmlspecialchars($nickname); ?>!</h1>
-                    <img src="https://cdn.discordapp.com/avatars/<?php echo $user['id']; ?>/<?php echo $user['avatar']; ?>.png" class="rounded-img" alt="Avatar" />
-                </div>
-                <div class="container-fluid">
-                    <p class="devgru-profile-border">ID používateľa: <?php echo htmlspecialchars($user['id']); ?></p>
-                    <p class="devgru-profile-border">Rank: <?php echo htmlspecialchars($role_name); ?></p>
-                    <p class="devgru-profile-border">Unit: <?php echo htmlspecialchars($unit_name); ?></p>
-                </div>
+    <div class="container-fluid d-flex align-items-center justify-content-center">
+        <div class="container-fluid row justify-content-center">
+            <h1 class="text-light text-center-dashboard">Vitajte, <?php echo htmlspecialchars($nickname); ?>!</h1>
+            <img src="https://cdn.discordapp.com/avatars/<?php echo $user['id']; ?>/<?php echo $user['avatar']; ?>.png" class="rounded-img" style="width: 50%" alt="Avatar" />
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <h4 class="text-light">ID Užívateľa</h4>
+                <p class="devgru-profile-border text-light"><?php echo htmlspecialchars($user['id']); ?></p>
+            </div>
+            <div class="container">
+                <h4 class="text-light">Hodnosť</h4>
+                <p class="devgru-profile-border text-light"><?php echo htmlspecialchars($role_name); ?></p>
+            </div>
+            <div class="container">
+                <h4 class="text-light">Unit</h4>
+                <p class="devgru-profile-border text-light"><?php echo htmlspecialchars($unit_name); ?></p>
             </div>
         </div>
     </div>
-</div>
 
-<script src="./darker_nav.js"></script>
+</div>
 </body>
 </html>
