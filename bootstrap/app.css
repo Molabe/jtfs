@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .text-center-dashboard {
     text-align: center;
 }
 
-.text-center {
+.text-center-devgru {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,6 +22,10 @@
     background: #2E2E3A;
 }
 
+.bg-devgru-gray2 {
+    background: #121212;
+}
+
 .bg-devgru-black {
     background: #1B1B1F;
 }
@@ -28,7 +35,7 @@
 }
 
 .bg-devgru-red {
-    background: #5C1A1B;
+    background: #E2182F;
 }
 
 .text-devgru-blue {
@@ -48,7 +55,7 @@
 }
 
 .text-devgru-red {
-    color: #5C1A1B;
+    color: #E2182F;
 }
 
 .devgru-card-nswdg {
@@ -116,4 +123,137 @@ a {
     border-bottom: dotted;
     border-width: 5px;
     border-color: white;
+}
+
+.arvo-regular {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.arvo-bold {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.arvo-regular-italic {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.arvo-bold-italic {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.merriweather-light {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.merriweather-bold {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.merriweather-black {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.merriweather-light-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.merriweather-regular-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.merriweather-bold-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.merriweather-black-italic {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.active {
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+.dm-sans-semibold {
+              font-family: "DM Sans", sans-serif;
+              font-optical-sizing: auto;
+              font-weight: 700;
+              font-style: normal;
+          }
+
+.dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.dm-sans-regular {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.dm-sans-light {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.card {
+    position: relative;
+}
+
+.card-img-container {
+    height: 200px; /* Adjust this height as per your requirement */
+    overflow: hidden; /* Hide any parts of the image that exceed the container */
+    object-position: left;
+}
+
+.card-img-top {
+    object-fit: cover;  /* Ensures the image fills the container without distortion */
+    object-position: top center;  /* Change this to 'left', 'right', 'center', etc., to focus on a specific area */
+    width: 100%;
+    height: 100%;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Background color for text visibility */
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
