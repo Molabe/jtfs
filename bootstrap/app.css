@@ -257,3 +257,10 @@ a {
     padding: 15px;
     text-align: center;
 }
+
+/* Apply initial styles to fade-in sections */
+.fade-in-section {
+    opacity: 0;
+    background: #121212; /* Initial background color */
+    transition: opacity 1s ease-out, background-color 0.5s ease-out;
+}
