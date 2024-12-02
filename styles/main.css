@@ -259,7 +259,6 @@ a {
 /* Apply initial styles to fade-in sections */
 .fade-in-section {
     opacity: 0;
-    background: #121212; /* Initial background color */
     transition: opacity 1s ease-out, background-color 0.5s ease-out;
 }
 
@@ -276,6 +275,7 @@ a {
 }
 
 .text-container {
+    z-index: 1;
     filter: brightness(100%);
     position: absolute;
     color: rgb(255, 255, 255);
@@ -290,4 +290,5 @@ a {
 .image-container {
     filter: contrast(100%) brightness(55%);
     width: 100%;
+    z-index: -1;
 }
