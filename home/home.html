@@ -33,12 +33,55 @@
     </div>
 </nav>
 
-<div class="text-over-image" style="width: 100%;">
-    <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" class="gradient" style="width: 100%; height: 100%;" alt="">
-    <h1 id="text" class="text-center-devgru text-light" style="font-family: 'Roboto Mono', monospace">Task Force Osiris</h1>
+<div id="demo" class="text-over-image carousel slide" data-bs-ride="carousel" style="width: 100%;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active" data-bs-interval="5000">
+            <div class="gfg d-block w-100">
+                <div class="image-container">
+                    <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="TFO Image" class="d-block w-100">
+                </div>
+                <div class="text-container text-light" style="font-family: 'Roboto Mono', monospace">
+                    <h1><strong class="text-devgru-red">Task Force Osiris</strong></h1>
+                    <p><strong>Fortune favors the brave, and danger is our home.</strong></p>
+                </div>
+            </div>
+        </div>
+        <!-- Second Slide -->
+        <div class="carousel-item" data-bs-interval="7000">
+            <div class="gfg d-block w-100">
+                <div class="image-container">
+                    <img src="../images/Arma3_x64_2024-11-28_23-56-26_kopie.jpg" alt="Training Image" class="d-block w-100">
+                </div>
+                <div class="text-container text-light" style="font-family: 'Roboto Mono', monospace">
+                    <h1><strong class="text-devgru-red">Tímový tréning</strong></h1>
+                    <p><strong>Dokonalosť sa získava disciplínou a precíznosťou. Pridajte sa k nám v simulovaných bojových scenároch, aby ste si vylepšili svoje schopnosti.</strong></p>
+                </div>
+            </div>
+        </div>
+        <!-- Third Slide -->
+        <div class="carousel-item" data-bs-interval="5000">
+            <div class="gfg d-block w-100">
+                <div class="image-container">
+                    <img src="../images/107410_20241023235653_1.png" alt="Mission Objectives Image" class="d-block w-100">
+                </div>
+                <div class="text-container text-light" style="font-family: 'Roboto Mono', monospace">
+                    <h1><strong class="text-devgru-red">Ciele misie</strong></h1>
+                    <p><strong>Každá rola sa počíta. Od prieskumu až po priamu akciu, každý člen prispieva k úspechu misie.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="container-fluid bg-devgru-black pt-4 pb-4">
+<div class="bg-devgru-black">
+
+<div class="container-fluid bg-devgru-black pt-4 pb-4 custom-pos">
     <div class="container rounded bg-devgru-gray2 d-flex p-4 fade-in-section">
         <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="logo" class="img-fluid w-50 pe-3 rounded">
         <div class="cont-Text">
@@ -58,10 +101,10 @@
         </div>
     </div>
 </div>
+</div>
 
-<script src="../textGenerator.js"></script>
 <script src="../darker_nav.js"></script>
-<script src="../disableDevTools.js"></script>
+<!-- <script src="../disableDevTools.js"></script> -->
 <script src="../showSections.js"></script>
 
 
