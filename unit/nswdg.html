@@ -52,9 +52,9 @@
   </div>
 </div>
 
-<div class="bg-devgru-black">
+<div class="bg-devgru-black flex-md-wrap justify-content-center">
 
-  <div id="apply" class="container-fluid bg-devgru-gray2 p-5 text-center" style="z-index: 100; position: relative;">
+  <div id="apply" class="container-fluid bg-devgru-gray2 p-5 text-center flex-wrap" style="z-index: 100; position: relative;">
     <div class="container text-center fade-in-section">
       <h5 class="text-devgru-red arvo-bold">JOIN THE FEW, EXCEL WITH THE BEST</h5>
       <h2 class="text-light arvo-bold pt-3">ENLIST NAVY SPECIAL WARFARE</h2>
@@ -83,18 +83,50 @@
       <div class="container d-flex justify-content-center gap-3">
 
         <div style="width: 550px; height: 800px; border-width: 1px; border-style: solid; border-color: #E2182F; border-radius: 10px; position: relative; overflow: hidden;">
-          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Logo" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; object-position: 10% center; filter: brightness(75%)">
-          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px">SEAL/SO</h2>
+          <!-- Background image -->
+          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Background" class="img-fluid"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: 10% center; filter: brightness(20%); position: absolute; top: 0; left: 0; z-index: 1;">
+
+          <!-- Overlay image -->
+          <img src="../images/SEAL.png" alt="Overlay" class="img-fluid"
+               style="width: 75%; height: auto; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+          <!-- Text overlay -->
+          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px; z-index: 3;">
+            SEAL/SO
+          </h2>
+        </div>
+
+
+
+        <div style="width: 550px; height: 800px; border-width: 1px; border-style: solid; border-color: #E2182F; border-radius: 10px; position: relative; overflow: hidden;">
+          <!-- Background image -->
+          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Background" class="img-fluid"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: 55% center; filter: brightness(20%); position: absolute; top: 0; left: 0; z-index: 1;">
+
+          <!-- Overlay image -->
+          <img src="../images/EOD.png" alt="Overlay" class="img-fluid"
+               style="width: 75%; height: auto; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+          <!-- Text overlay -->
+          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px; z-index: 3;">
+            EXPLOSIVE ORDINANCE DISPOSAL
+          </h2>
         </div>
 
         <div style="width: 550px; height: 800px; border-width: 1px; border-style: solid; border-color: #E2182F; border-radius: 10px; position: relative; overflow: hidden;">
-          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Logo" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% center; filter: brightness(75%)">
-          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px">EXPLOSIVE ORDINANCE DISPOSAL</h2>
-        </div>
+          <!-- Background image -->
+          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Background" class="img-fluid"
+               style="width: 100%; height: 100%; object-fit: cover; object-position: 100% center; filter: brightness(20%); position: absolute; top: 0; left: 0; z-index: 1;">
 
-        <div style="width: 550px; height: 800px; border-width: 1px; border-style: solid; border-color: #E2182F; border-radius: 10px; position: relative; overflow: hidden;">
-          <img src="../images/Arma3_x64_2024-11-29_00-04-52_kopie.jpg" alt="Logo" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover; object-position: 100% center; filter: brightness(75%)">
-          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px">JOINT TERMINAL ATTACK CONTROLLER</h2>
+          <!-- Overlay image -->
+          <img src="../images/CCT.png" alt="Overlay" class="img-fluid"
+               style="width: 75%; height: auto; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+
+          <!-- Text overlay -->
+          <h2 style="position: absolute; bottom: 0; width: 100%; color: white; margin: 0; padding: 20px; text-align: center; font-size: 26px; z-index: 3;">
+            JOINT TERMINAL ATTACK CONTROLLER
+          </h2>
         </div>
 
       </div>
@@ -105,7 +137,7 @@
 </div>
 
 <script src="../scripts/darker_nav.js"></script>
-<script src="../scripts/disableDevTools.js"></script>
+<!-- <script src="../scripts/disableDevTools.js"></script> -->
 <script src="../scripts/showSections.js"></script>
 
 
